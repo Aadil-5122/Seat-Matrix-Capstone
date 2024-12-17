@@ -1,11 +1,10 @@
 import uvicorn
 from fastapi.responses import RedirectResponse
 
-from utils.analytics import add_counts_to_ddb, fetch_counts
+from utils.analytics import add_counts_to_ddb, fetch_stats
 from typing import List, Dict
-from datetime import datetime, timedelta
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -241,18 +240,6 @@ seats = [
 in_out_records = []
 
 
-def generate_sample_data():
-    for hour in range(8, 18):  # 8 AM to 6 PM
-        for _ in range(20, 30):  # Random entries and exits per hour
-            timestamp_entry = datetime.now().replace(hour=hour, minute=0, second=0) + timedelta(minutes=6)
-            in_out_records.append(InOut(id=len(in_out_records) + 1, timestamp=timestamp_entry, is_entry=True))
-            timestamp_exit = timestamp_entry + timedelta(minutes=30)
-            in_out_records.append(InOut(id=len(in_out_records) + 1, timestamp=timestamp_exit, is_entry=False))
-
-
-# generate_sample_data()
-
-
 # Endpoints
 @app.get("/floors/", response_model=List[Floor])
 def read_floors():
@@ -262,23 +249,6 @@ def read_floors():
 @app.get("/seats/", response_model=List[Seat])
 def read_seats(floor_id: int):
     return [seat for seat in seats if seat.floor_id == floor_id]
-
-
-@app.put("/seats/{seat_id}", response_model=Seat)
-def update_seat(seat_id: int, seat_update: Seat):
-    for seat in seats:
-        if seat.id == seat_id:
-            seat.is_occupied = seat_update.is_occupied
-            return seat
-    raise HTTPException(status_code=404, detail="Seat not found")
-
-
-@app.post("/in-out/", response_model=InOut)
-def create_in_out(in_out: InOut):
-    new_id = len(in_out_records) + 1
-    new_record = InOut(id=new_id, timestamp=datetime.now(), is_entry=in_out.is_entry)
-    in_out_records.append(new_record)
-    return new_record
 
 
 @app.get("/in-out/", response_model=List[Dict[str, int]])
@@ -321,9 +291,11 @@ def get_seat_occupancy():
         "occupancy_rate": occupancy_rate
     }
 
+
 @app.get("/get-stats")
-def get_stats():
-    return fetch_counts()
+def get_stats(stats_type: str):
+    return fetch_stats(stats_type)
+
 
 @app.get("/analytics/")
 def get_analytics():
@@ -343,6 +315,7 @@ def get_analytics():
 @app.get("/")
 async def root():
     return RedirectResponse(url="/docs")
+
 if __name__ == "__main__":
-    # add_counts_to_ddb("./data/")
+    add_counts_to_ddb("/home/pratham/happy/Capstone/data/maingate2-tester.mp4")
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -3,6 +3,9 @@ from ultralytics import YOLO
 from ultralytics.solutions import object_counter
 import cv2
 
+import logging
+
+logger = logging.getLogger("app_logger")
 
 model = YOLO("model/yolov8n.pt")
 output_path = "results/object_counting_output-4.mp4"
@@ -27,12 +30,11 @@ def count_students(path):
     while cap.isOpened():
         success, im0 = cap.read()
         if not success:
-            print("Video frame is empty or video processing has been successfully completed.")
+            logger.info("Video frame is empty or video processing has been successfully completed.")
             break
         tracks = model.track(im0, persist=True, show=False, classes= [0],
                             #  tracker='deepsort.yaml'
                              )
-
         im0 = counter.start_counting(im0, tracks)
         video_writer.write(im0)
 
