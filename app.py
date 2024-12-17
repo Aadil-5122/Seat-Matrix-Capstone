@@ -1,5 +1,7 @@
 import uvicorn
+from fastapi.responses import RedirectResponse
 
+from utils.analytics import add_counts_to_ddb, fetch_counts
 from typing import List, Dict
 from datetime import datetime, timedelta
 
@@ -39,9 +41,9 @@ class Statistic(BaseModel):
 
 
 class InOut(BaseModel):
-    id: int
-    timestamp: datetime
-    is_entry: bool
+    timestamp: int
+    students_in: int
+    students_out: int
 
 
 # In-memory data storage
@@ -248,7 +250,7 @@ def generate_sample_data():
             in_out_records.append(InOut(id=len(in_out_records) + 1, timestamp=timestamp_exit, is_entry=False))
 
 
-generate_sample_data()
+# generate_sample_data()
 
 
 # Endpoints
@@ -319,6 +321,9 @@ def get_seat_occupancy():
         "occupancy_rate": occupancy_rate
     }
 
+@app.get("/get-stats")
+def get_stats():
+    return fetch_counts()
 
 @app.get("/analytics/")
 def get_analytics():
@@ -335,5 +340,9 @@ def get_analytics():
     }
 
 
+@app.get("/")
+async def root():
+    return RedirectResponse(url="/docs")
 if __name__ == "__main__":
+    # add_counts_to_ddb("./data/")
     uvicorn.run(app, host="0.0.0.0", port=8000)
