@@ -1,0 +1,418 @@
+[
+    {
+        "id": "263",
+        "status": "occupied"
+    },
+    {
+        "id": "264",
+        "status": "occupied"
+    },
+    {
+        "id": "265",
+        "status": "occupied"
+    },
+    {
+        "id": "266",
+        "status": "empty"
+    },
+    {
+        "id": "267",
+        "status": "occupied"
+    },
+    {
+        "id": "268",
+        "status": "occupied"
+    },
+    {
+        "id": "269",
+        "status": "empty"
+    },
+    {
+        "id": "270",
+        "status": "occupied"
+    },
+    {
+        "id": "271",
+        "status": "occupied"
+    },
+    {
+        "id": "272",
+        "status": "empty"
+    },
+    {
+        "id": "273",
+        "status": "occupied"
+    },
+    {
+        "id": "274",
+        "status": "empty"
+    },
+    {
+        "id": "275",
+        "status": "occupied"
+    },
+    {
+        "id": "276",
+        "status": "occupied"
+    },
+    {
+        "id": "277",
+        "status": "occupied"
+    },
+    {
+        "id": "278",
+        "status": "occupied"
+    },
+    {
+        "id": "279",
+        "status": "occupied"
+    },
+    {
+        "id": "280",
+        "status": "empty"
+    },
+    {
+        "id": "281",
+        "status": "empty"
+    },
+    {
+        "id": "282",
+        "status": "occupied"
+    },
+    {
+        "id": "283",
+        "status": "empty"
+    },
+    {
+        "id": "284",
+        "status": "occupied"
+    },
+    {
+        "id": "285",
+        "status": "empty"
+    },
+    {
+        "id": "286",
+        "status": "empty"
+    },
+    {
+        "id": "287",
+        "status": "empty"
+    },
+    {
+        "id": "288",
+        "status": "empty"
+    },
+    {
+        "id": "289",
+        "status": "occupied"
+    },
+    {
+        "id": "290",
+        "status": "occupied"
+    },
+    {
+        "id": "291",
+        "status": "empty"
+    },
+    {
+        "id": "292",
+        "status": "occupied"
+    },
+    {
+        "id": "293",
+        "status": "empty"
+    },
+    {
+        "id": "294",
+        "status": "occupied"
+    },
+    {
+        "id": "295",
+        "status": "occupied"
+    },
+    {
+        "id": "296",
+        "status": "occupied"
+    },
+    {
+        "id": "297",
+        "status": "empty"
+    },
+    {
+        "id": "298",
+        "status": "occupied"
+    },
+    {
+        "id": "299",
+        "status": "occupied"
+    },
+    {
+        "id": "300",
+        "status": "empty"
+    },
+    {
+        "id": "301",
+        "status": "occupied"
+    },
+    {
+        "id": "302",
+        "status": "occupied"
+    },
+    {
+        "id": "303",
+        "status": "occupied"
+    },
+    {
+        "id": "304",
+        "status": "occupied"
+    },
+    {
+        "id": "305",
+        "status": "occupied"
+    },
+    {
+        "id": "306",
+        "status": "occupied"
+    },
+    {
+        "id": "307",
+        "status": "occupied"
+    },
+    {
+        "id": "308",
+        "status": "occupied"
+    },
+    {
+        "id": "309",
+        "status": "empty"
+    },
+    {
+        "id": "310",
+        "status": "occupied"
+    },
+    {
+        "id": "311",
+        "status": "empty"
+    },
+    {
+        "id": "312",
+        "status": "empty"
+    },
+    {
+        "id": "313",
+        "status": "empty"
+    },
+    {
+        "id": "314",
+        "status": "occupied"
+    },
+    {
+        "id": "315",
+        "status": "empty"
+    },
+    {
+        "id": "316",
+        "status": "occupied"
+    },
+    {
+        "id": "317",
+        "status": "empty"
+    },
+    {
+        "id": "318",
+        "status": "empty"
+    },
+    {
+        "id": "319",
+        "status": "occupied"
+    },
+    {
+        "id": "320",
+        "status": "empty"
+    },
+    {
+        "id": "321",
+        "status": "occupied"
+    },
+    {
+        "id": "322",
+        "status": "empty"
+    },
+    {
+        "id": "323",
+        "status": "occupied"
+    },
+    {
+        "id": "324",
+        "status": "empty"
+    },
+    {
+        "id": "325",
+        "status": "empty"
+    },
+    {
+        "id": "326",
+        "status": "occupied"
+    },
+    {
+        "id": "327",
+        "status": "occupied"
+    },
+    {
+        "id": "328",
+        "status": "occupied"
+    },
+    {
+        "id": "329",
+        "status": "empty"
+    },
+    {
+        "id": "330",
+        "status": "empty"
+    },
+    {
+        "id": "331",
+        "status": "empty"
+    },
+    {
+        "id": "332",
+        "status": "occupied"
+    },
+    {
+        "id": "333",
+        "status": "occupied"
+    },
+    {
+        "id": "334",
+        "status": "empty"
+    },
+    {
+        "id": "335",
+        "status": "occupied"
+    },
+    {
+        "id": "336",
+        "status": "occupied"
+    },
+    {
+        "id": "337",
+        "status": "occupied"
+    },
+    {
+        "id": "338",
+        "status": "occupied"
+    },
+    {
+        "id": "339",
+        "status": "empty"
+    },
+    {
+        "id": "340",
+        "status": "occupied"
+    },
+    {
+        "id": "341",
+        "status": "empty"
+    },
+    {
+        "id": "342",
+        "status": "empty"
+    },
+    {
+        "id": "343",
+        "status": "empty"
+    },
+    {
+        "id": "344",
+        "status": "occupied"
+    },
+    {
+        "id": "345",
+        "status": "occupied"
+    },
+    {
+        "id": "346",
+        "status": "occupied"
+    },
+    {
+        "id": "347",
+        "status": "occupied"
+    },
+    {
+        "id": "348",
+        "status": "occupied"
+    },
+    {
+        "id": "349",
+        "status": "occupied"
+    },
+    {
+        "id": "350",
+        "status": "empty"
+    },
+    {
+        "id": "351",
+        "status": "empty"
+    },
+    {
+        "id": "352",
+        "status": "occupied"
+    },
+    {
+        "id": "353",
+        "status": "occupied"
+    },
+    {
+        "id": "354",
+        "status": "occupied"
+    },
+    {
+        "id": "355",
+        "status": "empty"
+    },
+    {
+        "id": "356",
+        "status": "occupied"
+    },
+    {
+        "id": "357",
+        "status": "occupied"
+    },
+    {
+        "id": "358",
+        "status": "empty"
+    },
+    {
+        "id": "359",
+        "status": "occupied"
+    },
+    {
+        "id": "360",
+        "status": "empty"
+    },
+    {
+        "id": "361",
+        "status": "occupied"
+    },
+    {
+        "id": "362",
+        "status": "occupied"
+    },
+    {
+        "id": "363",
+        "status": "empty"
+    },
+    {
+        "id": "364",
+        "status": "occupied"
+    },
+    {
+        "id": "365",
+        "status": "empty"
+    },
+    {
+        "id": "366",
+        "status": "empty"
+    }
+]
