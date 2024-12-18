@@ -1,3 +1,4 @@
-from utils.analytics import add_counts_to_ddb
+# from utils.analytics import add_counts_to_ddb
+from utils.count import count_students
 
-add_counts_to_ddb("/home/pratham/happy/Capstone/data/maingate-tester-4.mp4")
+count_students("data/maingate-tester-3.mp4")
