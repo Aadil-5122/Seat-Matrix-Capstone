@@ -12,6 +12,24 @@ def update_data_fetch_schedule(item):
     table.put_item(Item=item)
 
 
+def get_latest_in_out_entry(table_name):
+    """
+    Fetch the latest entry from the 'in_out' DynamoDB table.
+    :return: The latest entry as a dictionary.
+    """
+    dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION)
+    table = dynamodb.Table(table_name)
+
+    response = table.scan()
+    items = response.get('Items', [])
+
+    if not items:
+        return None
+
+    latest_entry = max(items, key=lambda x: x['timestamp'])
+    return latest_entry
+
+
 def disable_data_fetcher(uid, app_name=None):
     try:
         dynamodb = boto3.resource('dynamodb',
