@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 import json
 
-from utils.analytics import fetch_stats
+from utils.analytics import fetch_stats, add_seat_occupancy_to_ddb
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 from typing import List, Dict
@@ -53,7 +53,10 @@ def read_seats(floor_id: int):
         seat = seats_json[seat_number]
         seats_list.append(Seat(id = seat.get("id"), number=seat_number, floor_id = floor_id,
                           is_occupied= True if seat.get("status") is 'occupied' else False))
-    return seats
+
+    add_seat_occupancy_to_ddb()
+
+    return seats_list
 
 
 @app.get("/in-out-status/", response_model=Dict)
