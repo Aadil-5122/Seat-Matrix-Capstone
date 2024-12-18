@@ -1,50 +1,52 @@
 from ultralytics import YOLO
 # from ultralytics.solutions import object_counter
-from ultralytics.solutions import object_counter
+from ultralytics import solutions
 import cv2
+import time
 
 import logging
 
 logger = logging.getLogger("app_logger")
 
-model = YOLO("model/yolov8n.pt")
+model = YOLO("yolo11n.pt")
 output_path = "results/object_counting_output-4.mp4"
 
 def count_students(path):
     cap = cv2.VideoCapture(path)
+    # cap = cv2.VideoCapture("/home/pratham/happy/Capstone/data/maingate-tester-4.mp4")
     assert cap.isOpened(), "Error reading video file"
     w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS))
 
-    line_points = [(800,1335),(1617,1418),(1698,1149),(910,1206)]
+    region_points = [(800, 1335), (1617, 1418), (1698, 1149), (910, 1206)]
 
-    video_writer = cv2.VideoWriter(output_path,
-                           cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
+    video_writer = cv2.VideoWriter("region_counting.avi", cv2.VideoWriter_fourcc(*"mp4v"), fps, (w, h))
 
-    counter = object_counter.ObjectCounter()
-    counter.set_args(view_img=False,
-                     reg_pts=line_points,
-                     classes_names=model.names,
-                     draw_tracks=True,
-                     line_dist_thresh = 5)
+    region = solutions.ObjectCounter(
+        region=region_points,
+        model="yolov8n.pt",
+        classes=[0],
+        show_in=True,
+        show_out=True,
+    )
 
     while cap.isOpened():
         success, im0 = cap.read()
         if not success:
-            logger.info("Video frame is empty or video processing has been successfully completed.")
+            print("Video frame is empty or video processing has been successfully completed.")
             break
-        tracks = model.track(im0, persist=True, show=False, classes= [0],
-                            #  tracker='deepsort.yaml'
-                             )
-        im0 = counter.start_counting(im0, tracks)
+        im0 = region.count(im0)
+        print(f"in: {region.in_count} out: {region.out_count}")
         video_writer.write(im0)
 
     cap.release()
     video_writer.release()
     cv2.destroyAllWindows()
     count = {
-        "in": counter.in_count,
-        "out": counter.out_count,
-        "timestamp": counter.timestamp,
+        "in": region.in_count,
+        "out": region.out_count,
+        "timestamp": str(time.time()),
     }
+
+    print(count)
 
     return count
