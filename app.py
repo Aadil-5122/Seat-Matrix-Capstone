@@ -1,6 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
+import json
 
 from utils.analytics import fetch_stats
 from fastapi.middleware.cors import CORSMiddleware
@@ -44,7 +45,15 @@ def read_floors():
 
 @app.get("/seats/", response_model=List[Seat])
 def read_seats(floor_id: int):
-    return [seat for seat in seats if seat.floor_id == floor_id]
+    seats_list = []
+    file_path = f"seat_occupancy/seats{floor_id}.json"
+    with open(file_path, 'r') as file:
+        seats_json = json.load(file)
+    for seat_number in range(len(seats_json)):
+        seat = seats_json[seat_number]
+        seats_list.append(Seat(id = seat.get("id"), number=seat_number, floor_id = floor_id,
+                          is_occupied= True if seat.get("status") is 'occupied' else False))
+    return seats
 
 
 @app.get("/in-out-status/", response_model=Dict)
