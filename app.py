@@ -1,6 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
+
+from utils.analytics import fetch_stats
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 from typing import List, Dict
@@ -9,6 +11,8 @@ from utils.analytics import add_counts_to_ddb, fetch_stats
 from ddb_utils import get_latest_in_out_entry
 from constants import floors, seats
 from models import Seat, Floor, Statistic
+
+from utils.count import count_students
 
 app = FastAPI()
 
@@ -132,5 +136,4 @@ async def root():
     return RedirectResponse(url="/docs")
 
 if __name__ == "__main__":
-    add_counts_to_ddb("/home/pratham/happy/Capstone/data/maingate2-tester.mp4")
     uvicorn.run(app, host="0.0.0.0", port=8000)
