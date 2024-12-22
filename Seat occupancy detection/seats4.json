@@ -1,0 +1,293 @@
+[
+    {
+        "id": "367",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "368",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "369",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "370",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "371",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "372",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "373",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "374",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "375",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "376",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "377",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "378",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "379",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "380",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "381",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "382",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "383",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "384",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "385",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "386",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "387",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "388",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "389",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "390",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "391",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "392",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "393",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "394",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "395",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "396",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "397",
+        "label": "chair",
+        "status": "empty"
+    },
+    {
+        "id": "398",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "399",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "400",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "401",
+        "label": "chair",
+        "status": "occupied"
+    },
+    {
+        "id": "402",
+        "status": "empty"
+    },
+    {
+        "id": "403",
+        "status": "empty"
+    },
+    {
+        "id": "404",
+        "status": "occupied"
+    },
+    {
+        "id": "405",
+        "status": "empty"
+    },
+    {
+        "id": "406",
+        "status": "occupied"
+    },
+    {
+        "id": "407",
+        "status": "empty"
+    },
+    {
+        "id": "408",
+        "status": "empty"
+    },
+    {
+        "id": "409",
+        "status": "empty"
+    },
+    {
+        "id": "410",
+        "status": "empty"
+    },
+    {
+        "id": "411",
+        "status": "empty"
+    },
+    {
+        "id": "412",
+        "status": "occupied"
+    },
+    {
+        "id": "413",
+        "status": "empty"
+    },
+    {
+        "id": "414",
+        "status": "occupied"
+    },
+    {
+        "id": "415",
+        "status": "occupied"
+    },
+    {
+        "id": "416",
+        "status": "empty"
+    },
+    {
+        "id": "417",
+        "status": "occupied"
+    },
+    {
+        "id": "418",
+        "status": "empty"
+    },
+    {
+        "id": "419",
+        "status": "empty"
+    },
+    {
+        "id": "420",
+        "status": "empty"
+    },
+    {
+        "id": "421",
+        "status": "empty"
+    },
+    {
+        "id": "422",
+        "status": "empty"
+    },
+    {
+        "id": "423",
+        "status": "occupied"
+    },
+    {
+        "id": "424",
+        "status": "empty"
+    },
+    {
+        "id": "425",
+        "status": "occupied"
+    },
+    {
+        "id": "426",
+        "status": "empty"
+    },
+    {
+        "id": "427",
+        "status": "occupied"
+    },
+    {
+        "id": "428",
+        "status": "occupied"
+    },
+    {
+        "id": "429",
+        "status": "empty"
+    },
+    {
+        "id": "430",
+        "status": "empty"
+    }
+]
